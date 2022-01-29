@@ -1,6 +1,6 @@
 <script context="module">
-  export async function load({ page, fetch }) {
-    const id = page.params.id
+  export async function load({ params, fetch }) {
+    const id = params.id
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
     const guide = await res.json()
 
